@@ -1,0 +1,53 @@
+{
+  "name": "archaelogical-informatization-poc",
+  "version": "1.0.0",
+  "author": "kimhongyeon",
+  "license": "MIT",
+  "description": "대형 언어 모델(LLM)을 활용해 고고학 발굴조사보고서 PDF의 메타데이터를 자동으로 추출 및 구조화하는 정보화 파이프라인의 개념 검증(PoC) 프로젝트입니다.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kimhongyeon/archaelogical-informatization-poc.git"
+  },
+  "homepage": "https://poc.heripo.com",
+  "scripts": {
+    "preinstall": "npm run download-glossary-embeddings && npm run setup-python-env",
+    "dev": "next dev --turbopack",
+    "build:develpment": "NODE_ENV=development next build",
+    "build:production": "NODE_ENV=production next build",
+    "check-types": "tsc --noEmit",
+    "start": "next start --port 3000",
+    "lint": "eslint --ext ts,tsx ./src",
+    "lint:fix": "eslint --fix --ext ts,tsx ./src",
+    "prettier": "prettier --write .",
+    "download-glossary-embeddings": "node ./scripts/download-glossary-embeddings.js",
+    "setup-python-env": "node ./scripts/setup-python-env.js"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^1.3.22",
+    "@tanstack/react-query": "^5.76.0",
+    "ai": "^4.3.15",
+    "better-sqlite3": "^11.10.0",
+    "csv-parser": "^3.2.0",
+    "dompurify": "^3.2.5",
+    "marked": "^15.0.11",
+    "next": "^15.3.3",
+    "openai": "^4.98.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "uuid": "^11.1.0",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.15.17",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.4",
+    "@types/uuid": "^10.0.0",
+    "eslint": "^9.26.0",
+    "eslint-config-next": "^15.3.3",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3"
+  }
+}

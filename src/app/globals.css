@@ -1,0 +1,42 @@
+
+/* CSS 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  /*list-style: none;*/
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 전역 스타일 */
+header, footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+p {
+  color: #444;
+  line-height: 1.6;
+}

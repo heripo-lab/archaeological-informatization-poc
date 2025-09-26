@@ -1,0 +1,443 @@
+{
+  "tables": [
+    {
+      "table_name": "excavated_site",
+      "description": "발굴 조사가 이루어진 유적 또는 구역에 대한 정보를 담는 테이블입니다.",
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "조사 유적의 고유 식별자입니다. 기본 키로 사용됩니다."
+        },
+        {
+          "name": "report_id",
+          "type": "string",
+          "description": "해당 조사를 다룬 보고서의 고유 ID. report 테이블의 id를 참조하는 외래 키입니다."
+        },
+        {
+          "name": "site_name",
+          "type": "string",
+          "description": "조사 유적 또는 구역의 명칭입니다."
+        },
+        {
+          "name": "start_date",
+          "type": "string",
+          "description": "조사 시작일입니다. YYYY-MM-DD 형식으로 저장됩니다."
+        },
+        {
+          "name": "end_date",
+          "type": "string",
+          "description": "조사 종료일입니다. YYYY-MM-DD 형식으로 저장됩니다."
+        },
+        {
+          "name": "investigator_organization",
+          "type": "string",
+          "description": "조사를 수행한 기관 또는 연구소의 이름입니다."
+        },
+        {
+          "name": "location_admin",
+          "type": "string",
+          "description": "조사 유적이 위치한 행정구역 주소입니다."
+        },
+        {
+          "name": "coordinate_lat",
+          "type": "number",
+          "description": "조사 유적 중심의 위도 좌표입니다."
+        },
+        {
+          "name": "coordinate_lng",
+          "type": "number",
+          "description": "조사 유적 중심의 경도 좌표입니다."
+        },
+        {
+          "name": "area_m2",
+          "type": "number",
+          "description": "조사 유적의 총 조사 면적(제곱미터 단위)입니다."
+        },
+        {
+          "name": "terrain_description",
+          "type": "string",
+          "description": "조사 유적이 위치한 지형의 요약 설명입니다."
+        },
+        {
+          "name": "grid_system_desc",
+          "type": "string",
+          "description": "격자 또는 트렌치를 설정한 방식에 대한 설명입니다."
+        },
+        {
+          "name": "excavation_depth_max",
+          "type": "number",
+          "description": "최대 굴착 깊이(m)입니다."
+        },
+        {
+          "name": "remarks",
+          "type": "string",
+          "description": "기타 참고사항 또는 조사 특이사항입니다."
+        },
+        {
+          "name": "images",
+          "type": "string[]",
+          "description": "조사 유적 관련 이미지 URL들을 담은 JSON 문자열 배열입니다."
+        }
+      ]
+    },
+    {
+      "table_name": "trench",
+      "description": "조사 유적 내의 트렌치(조사 구획)에 대한 정보를 기록합니다.",
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "트렌치 고유 ID입니다."
+        },
+        {
+          "name": "excavated_site_id",
+          "type": "string",
+          "description": "해당 트렌치가 속한 조사 유적의 ID입니다."
+        },
+        {
+          "name": "trench_number",
+          "type": "string",
+          "description": "트렌치의 번호입니다."
+        },
+        {
+          "name": "trench_name",
+          "type": "string",
+          "description": "트렌치의 명칭입니다."
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "description": "해당 트렌치에 대한 상세 설명입니다."
+        },
+        {
+          "name": "position_description",
+          "type": "string",
+          "description": "유적 내 트렌치의 위치 설명입니다."
+        },
+        {
+          "name": "orientation",
+          "type": "string",
+          "description": "트렌치의 방향입니다. 예: 남동-북서."
+        },
+        {
+          "name": "length_m",
+          "type": "number",
+          "description": "트렌치의 길이 (m)입니다."
+        },
+        {
+          "name": "width_m",
+          "type": "number",
+          "description": "트렌치의 너비 (m)입니다."
+        },
+        {
+          "name": "depth_max_m",
+          "type": "number",
+          "description": "트렌치의 최대 굴착 깊이입니다."
+        },
+        {
+          "name": "slope_description",
+          "type": "string",
+          "description": "트렌치 주변의 경사나 지형적 조건을 설명합니다."
+        },
+        {
+          "name": "stratigraphy_count",
+          "type": "number",
+          "description": "해당 트렌치에서 구분된 층위의 수입니다."
+        },
+        {
+          "name": "key_findings",
+          "type": "string",
+          "description": "트렌치 내 주요 조사 결과 요약입니다. 유구, 유물 등 포함."
+        },
+        {
+          "name": "disturbance_or_condition",
+          "type": "string",
+          "description": "훼손 또는 환경적 상태에 대한 설명입니다."
+        },
+        {
+          "name": "remarks",
+          "type": "string",
+          "description": "기타 참고 사항입니다."
+        },
+        {
+          "name": "coordinate_lat",
+          "type": "number",
+          "description": "중심의 위도 좌표입니다."
+        },
+        {
+          "name": "coordinate_lng",
+          "type": "number",
+          "description": "중심의 경도 좌표입니다."
+        },
+        {
+          "name": "images",
+          "type": "string[]",
+          "description": "이미지 URL 배열입니다. JSON 형식 문자열입니다."
+        },
+        {
+          "name": "page_references",
+          "type": "number[]",
+          "description": "보고서에 기재된 페이지 번호 배열입니다. JSON 형식 문자열입니다."
+        }
+      ]
+    },
+    {
+      "table_name": "feature",
+      "description": "조사 중 확인된 유구(건물지, 수혈, 우물 등)의 정보입니다.",
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "유구의 고유 식별자입니다."
+        },
+        {
+          "name": "excavated_site_id",
+          "type": "string",
+          "description": "유구가 속한 조사 유적의 ID입니다."
+        },
+        {
+          "name": "feature_number",
+          "type": "string",
+          "description": "유구의 번호입니다."
+        },
+        {
+          "name": "feature_name",
+          "type": "string",
+          "description": "유구의 명칭입니다."
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "description": "해당 유구에 대한 상세 설명입니다."
+        },
+        {
+          "name": "feature_type",
+          "type": "string",
+          "description": "유구의 대분류 유형입니다. 예: 건물지, 수혈 등."
+        },
+        {
+          "name": "subtype_or_form",
+          "type": "string",
+          "description": "세부 형식 또는 구조 유형입니다."
+        },
+        {
+          "name": "associated_period",
+          "type": "string",
+          "description": "유구의 추정 시대입니다."
+        },
+        {
+          "name": "construction_method",
+          "type": "string",
+          "description": "유구의 축조 방식에 대한 설명입니다."
+        },
+        {
+          "name": "material",
+          "type": "string",
+          "description": "사용된 재료. 예: 석재, 점토 등."
+        },
+        {
+          "name": "dimension_description",
+          "type": "string",
+          "description": "유구의 크기(길이, 너비, 깊이 등)입니다."
+        },
+        {
+          "name": "shape_plan",
+          "type": "string",
+          "description": "유구의 평면 형상입니다."
+        },
+        {
+          "name": "shape_section",
+          "type": "string",
+          "description": "단면 형상입니다."
+        },
+        {
+          "name": "plan_summary",
+          "type": "string",
+          "description": "건물지 평면 구성 요약입니다."
+        },
+        {
+          "name": "posthole_count",
+          "type": "number",
+          "description": "주공 수. 해당 없으면 NULL입니다."
+        },
+        {
+          "name": "posthole_detail",
+          "type": "string",
+          "description": "주공의 크기, 간격, 목재 흔적 등에 대한 설명입니다."
+        },
+        {
+          "name": "structure_description",
+          "type": "string",
+          "description": "유구의 구조적 특징에 대한 설명입니다."
+        },
+        {
+          "name": "location_context",
+          "type": "string",
+          "description": "유구의 상대적 위치 또는 맥락 설명입니다."
+        },
+        {
+          "name": "stratigraphy_relation",
+          "type": "string",
+          "description": "층위와의 관계 또는 기반에 대한 설명입니다."
+        },
+        {
+          "name": "interpretation",
+          "type": "string",
+          "description": "유구의 기능 또는 해석에 대한 설명입니다."
+        },
+        {
+          "name": "artifact_presence",
+          "type": "string",
+          "description": "해당 유구에서 출토된 유물 정보 요약입니다."
+        },
+        {
+          "name": "disturbance_or_condition",
+          "type": "string",
+          "description": "교란, 유실, 중첩 등의 상태입니다."
+        },
+        {
+          "name": "coordinate_lat",
+          "type": "number",
+          "description": "중심의 위도 좌표입니다."
+        },
+        {
+          "name": "coordinate_lng",
+          "type": "number",
+          "description": "중심의 경도 좌표입니다."
+        },
+        {
+          "name": "images",
+          "type": "string[]",
+          "description": "유구 관련 이미지들의 URL 배열(JSON 형식 문자열)입니다."
+        },
+        {
+          "name": "remarks",
+          "type": "string",
+          "description": "기타 설명 또는 메모입니다."
+        },
+        {
+          "name": "page_references",
+          "type": "number[]",
+          "description": "보고서에 기재된 페이지 번호 배열입니다. JSON 형식 문자열입니다."
+        }
+      ]
+    },
+    {
+      "table": "artifact",
+      "description": "조사 과정에서 출토된 유물에 대한 정보를 저장하는 테이블입니다.",
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "유물 고유 식별자입니다. 각 유물은 이 필드를 기준으로 구분됩니다."
+        },
+        {
+          "name": "excavated_site_id",
+          "type": "string",
+          "description": "해당 유물이 출토된 조사 유적의 ID입니다. excavated_site 테이블의 id를 참조합니다."
+        },
+        {
+          "name": "feature_id",
+          "type": "string (nullable)",
+          "description": "해당 유물이 출토된 유구의 ID입니다. 해당 유구가 없거나 조사되지 않은 경우 NULL이 될 수 있습니다."
+        },
+        {
+          "name": "trench_id",
+          "type": "string (nullable)",
+          "description": "해당 유물이 출토된 트렌치의 ID입니다. 조사 문맥상 트렌치에서 직접 출토된 경우에만 기록되며, NULL일 수 있습니다."
+        },
+        {
+          "name": "artifact_number",
+          "type": "string",
+          "description": "유물 고유 번호입니다. 예: '유물 1', 'A-2-3호 토기편' 등"
+        },
+        {
+          "name": "artifact_name",
+          "type": "string",
+          "description": "유물의 명칭입니다."
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "description": "해당 유물에 대한 상세 설명입니다."
+        },
+        {
+          "name": "artifact_type",
+          "type": "string",
+          "description": "유물의 종류입니다. 예: '토기', '석기', '금속기', '자기', '기타' 등"
+        },
+        {
+          "name": "subtype_or_name",
+          "type": "string",
+          "description": "세부 분류 또는 유물의 통칭입니다. 예: '호', '뚜껑', '몸돌', '찌르개' 등"
+        },
+        {
+          "name": "material",
+          "type": "string",
+          "description": "유물을 구성하는 재질입니다. 예: '점토', '석영', '청자', '백자', '철' 등"
+        },
+        {
+          "name": "shape_or_morphology",
+          "type": "string",
+          "description": "형태나 구조적 특징에 대한 설명입니다. 예: '평저호', '삼각형 평면', '오목한 날' 등"
+        },
+        {
+          "name": "dimension_description",
+          "type": "string",
+          "description": "유물의 크기 정보입니다. 예: '직경 7.5㎝, 높이 3.2㎝', 또는 '길이 45mm, 두께 12mm'"
+        },
+        {
+          "name": "weight_g",
+          "type": "number",
+          "description": "유물의 무게를 그램 단위로 나타냅니다."
+        },
+        {
+          "name": "decoration_or_pattern",
+          "type": "string",
+          "description": "문양, 시문, 마감 방식 등의 장식적 요소를 서술합니다. 예: '격자문', '선문 타날', '회전물손질 정면흔' 등"
+        },
+        {
+          "name": "manufacture_technique",
+          "type": "string",
+          "description": "제작 기법 또는 공정에 대한 설명입니다. 예: '물손질', '타날', '손누름', '격지떼기' 등"
+        },
+        {
+          "name": "damage_or_condition",
+          "type": "string",
+          "description": "유물의 보존 상태, 손상 여부 등을 설명합니다. 예: '구연 일부 결실', '표면 침식', '완형에 가까움'"
+        },
+        {
+          "name": "associated_period",
+          "type": "string",
+          "description": "유물의 추정 연대 또는 문화적 배경입니다. 예: '삼국시대', '조선시대', '백제 후기' 등"
+        },
+        {
+          "name": "coordinate_lat",
+          "type": "number",
+          "description": "중심의 위도 좌표입니다."
+        },
+        {
+          "name": "coordinate_lng",
+          "type": "number",
+          "description": "중심의 경도 좌표입니다."
+        },
+        {
+          "name": "images",
+          "type": "string[]",
+          "description": "유물 사진의 URL 배열입니다. 예: ['https://example.com/image1.jpg', 'https://example.com/image2.jpg']"
+        },
+        {
+          "name": "remarks",
+          "type": "string",
+          "description": "기타 참고 사항이나 설명을 자유롭게 기술할 수 있는 필드입니다."
+        },
+        {
+          "name": "page_references",
+          "type": "number[]",
+          "description": "보고서에 기재된 페이지 번호 배열입니다. JSON 형식 문자열입니다."
+        }
+      ]
+    }
+  ]
+}
