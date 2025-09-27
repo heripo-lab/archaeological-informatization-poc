@@ -1,5 +1,19 @@
 # Python 설치 가이드 (GUI, OS별)
 
+중요: 운영체제 지원 안내
+- 본 PoC는 macOS와 Linux에서의 실행만을 공식적으로 지원합니다.
+- Windows 네이티브 환경(Windows PowerShell/명령 프롬프트에서 직접 실행)은 지원하지 않습니다. Windows 사용자는 WSL(Windows Subsystem for Linux)에서 Ubuntu 등 Linux 배포판을 설치한 뒤, WSL 터미널에서 프로젝트를 실행해 주세요.
+  - WSL이란? Windows에서 가벼운 Linux 환경을 구동할 수 있게 하는 기능입니다. 별도 가상머신 UI 없이 Windows와 나란히 Linux를 사용할 수 있습니다.
+  - WSL 설치 가이드: https://learn.microsoft.com/ko-kr/windows/wsl/install
+  - WSL 소개: https://learn.microsoft.com/ko-kr/windows/wsl/about
+- 왜 Windows 네이티브를 지원하지 않나요?
+  - 본 저장소는 개인 논문 연구용으로 macOS 기반 환경에 맞추어 만들어졌습니다.
+  - 오픈소스 공개는 연구 투명성 공유가 목적이며, 전문 개발지식이 없는 사용자에게 실행을 권하지 않습니다. 공개 준비 과정에서도 추가 호환성 확보(특히 Windows 네이티브)는 진행하지 않았습니다.
+  - Docker 제공도 고려했으나, Windows 사용자에게는 오히려 진입 장벽이 될 수 있어 제공하지 않습니다.
+- 그래도 꼭 실행해 보고 싶으시다면: kimhongyeon89@gmail.com 으로 연락 주세요.
+
+---
+
 본 프로젝트는 로컬에서 Python을 사용합니다. 아래 안내는 명령줄 설치(Homebrew/apt 등) 대신 공식 인스톨러나 운영체제 앱 스토어 같은 GUI 중심 경로를 안내합니다.
 
 권장 사양
@@ -22,16 +36,7 @@ B. 문제 해결 팁
 - PATH 인식이 되지 않을 때: 새 터미널을 열거나 재로그인하세요.
 - 기존/시스템 Python과 혼재 시: 터미널에서는 `python3`, `pip3`로 접근하는 것이 일반적입니다.
 
-2) Windows
-A. python.org 인스톨러(권장)
-- 공식 다운로드: https://www.python.org/downloads/windows/
-- 최신 Python 3.x의 Windows 인스톨러(.exe) 다운로드 → 실행
-- 첫 화면에서 반드시 "Add python.exe to PATH" 체크 → Install Now 진행
-
-B. 문제 해결 팁
-- 회사 PC 등에서 관리자 권한이 필요할 수 있습니다. 설치가 막히면 관리자 권한으로 다시 시도하세요.
-
-3) Linux(데스크톱 배포판, GUI 선호)
+2) Linux(데스크톱 배포판, GUI 선호)
 A. 앱 스토어(소프트웨어 센터) 사용
 - Ubuntu/Pop!_OS: "소프트웨어"(Software Center) 실행 → "Python 3" 검색 → 설치(또는 IDLE 포함 패키지 선택)
 - Fedora: "GNOME Software" 실행 → "Python 3" 검색 → 설치
