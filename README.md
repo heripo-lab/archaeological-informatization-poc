@@ -5,7 +5,7 @@
 - [디지털 부록 바로가기](https://poc.heripo.com)
 - [논문 요약 영상 시청](https://youtu.be/iyAXYahDiT0)
 - [PoC 시연 영상 시청](https://youtu.be/PCKKLPBP78w)
-- [논문 다운로드 페이지 바로가기]()
+- [논문 다운로드](https://poc.heripo.com/KCI_FI003244876.pdf)
 - [리서치 레이더(heripo) 구독하러 가기](https://heripo.com/research-radar/subscribe)
 
 ## 스냅샷 공지 및 유의사항(반드시 읽어주세요)
