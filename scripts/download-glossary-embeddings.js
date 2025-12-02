@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 
-const URL = 'https://poc.heripo.com/large-files/glossary-embeddings.json';
+const URL = 'https://files.heripo.com/archaelogical-informatization-poc/glossary-embeddings.json';
 const DATA_DIR = path.resolve(__dirname, '..', 'data');
 const DEST_PATH = path.join(DATA_DIR, 'glossary-embeddings.json');
 
