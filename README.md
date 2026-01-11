@@ -50,7 +50,7 @@
 
 범용 AI 뉴스레터 자동화 엔진입니다. 본 논문에서 개발한 메타데이터 추출 파이프라인의 개념을 확장하여, 크롤링 → 분석 → 콘텐츠 생성 → 저장의 전체 과정을 자동화하는 타입 안전 툴킷으로 발전시켰습니다.
 
-- **저장소**: https://github.com/kimhongyeon/llm-newsletter-kit-core
+- **저장소**: https://github.com/heripo-lab/llm-newsletter-kit-core
 - **npm 패키지**: `@llm-newsletter-kit/core`
 - **특징**: TypeScript 기반, Provider 패턴으로 모든 컴포넌트 교체 가능, 100% 테스트 커버리지
 - **라이선스**: Apache-2.0
@@ -59,7 +59,7 @@
 
 문화유산 분야 AI 뉴스레터 서비스입니다. LLM Newsletter Kit의 실제 운영 사례이자 레퍼런스 구현체로, 62개 크롤링 타겟에서 콘텐츠를 수집하여 주간 뉴스레터를 자동 생성합니다.
 
-- **저장소**: https://github.com/kimhongyeon/heripo-research-radar
+- **저장소**: https://github.com/heripo-lab/heripo-research-radar
 - **npm 패키지**: `@heripo/research-radar`
 - **서비스**: https://heripo.com/research-radar/subscribe
 - **운영 지표**: 발행당 $0.2-1 비용, 24/7 완전 자동화, 15% CTR
