@@ -1,12 +1,12 @@
 {
-  "name": "archaelogical-informatization-poc",
+  "name": "archaeological-informatization-poc",
   "version": "1.0.0",
   "author": "kimhongyeon",
   "license": "MIT",
   "description": "대형 언어 모델(LLM)을 활용해 고고학 발굴조사보고서 PDF의 메타데이터를 자동으로 추출 및 구조화하는 정보화 파이프라인의 개념 검증(PoC) 프로젝트입니다.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kimhongyeon/archaelogical-informatization-poc.git"
+    "url": "https://github.com/heripo-lab/archaeological-informatization-poc.git"
   },
   "homepage": "https://poc.heripo.com",
   "scripts": {
