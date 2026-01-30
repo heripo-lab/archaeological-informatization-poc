@@ -2,11 +2,32 @@
 
 본 저장소는 『헤리티지: 역사와 과학』 제58권 제3호(2025년 9월 30일) 게재 논문 「대형 언어 모델(LLM)을 활용한 고고학 정보화 연구 – 발굴조사보고서의 메타데이터 자동 추출 파이프라인 개념 검증」에서 구현한 PoC 코드의 “스냅샷”입니다. 학술적·기술적 투명성을 위해 소스코드를 공개합니다. 다만 이 저장소는 연구 시점의 기록 보존 목적이며, 추가 개발이나 제3자의 기여(Contribution)는 받지 않습니다.
 
+- [논문 다운로드](https://poc.heripo.com/KCI_FI003244876.pdf)
 - [디지털 부록 바로가기](https://poc.heripo.com)
 - [논문 요약 영상 시청](https://youtu.be/iyAXYahDiT0)
 - [PoC 시연 영상 시청](https://youtu.be/PCKKLPBP78w)
-- [논문 다운로드](https://poc.heripo.com/KCI_FI003244876.pdf)
+- [heripo engine - 프로덕션급 엔진 오픈소스](https://github.com/heripo-lab/heripo-engine)
+- [heripo engine 온라인 데모 체험](https://engine-demo.heripo.com)
 - [리서치 레이더(heripo) 구독하러 가기](https://heripo.com/research-radar/subscribe)
+
+## 🚀 heripo engine - 프로덕션급 엔진 공개
+
+본 논문의 PoC 연구 이후 2026년 1월 28일, 핵심 기술을 발전시켜 **[heripo engine](https://github.com/heripo-lab/heripo-engine)** 오픈소스 프로젝트를 공개했습니다.
+
+- **GitHub**: https://github.com/heripo-lab/heripo-engine
+- **온라인 데모**: https://engine-demo.heripo.com (로컬 설치 없이 바로 체험 가능)
+
+### 주요 개선사항
+
+본 PoC와 비교하여 다음과 같은 발전이 이루어졌습니다:
+
+- ✅ **OCR 지원**: Docling SDK를 활용한 고품질 OCR로 스캔 문서도 처리 가능
+- ✅ **Apple Silicon 최적화**: M1/M2/M3/M4/M5 칩에서 GPU 가속 지원
+- ✅ **프로덕션급 설계**: TypeScript 기반 모노레포, 100% 테스트 커버리지
+- ✅ **확장 가능한 파이프라인**: 원천 데이터 추출 → 데이터 원장 → 표준화 → 온톨로지
+- ✅ **범용 LLM 지원**: OpenAI, Anthropic, Google 등 다양한 LLM 프로바이더 지원
+
+heripo engine은 본 PoC의 개념을 검증 수준을 넘어 실제 운영 가능한 시스템으로 발전시킨 결과물입니다. 자세한 내용은 [heripo engine 저장소](https://github.com/heripo-lab/heripo-engine)를 참고하세요.
 
 ## 스냅샷 공지 및 유의사항(반드시 읽어주세요)
 - 본 코드는 연구의 아이디어와 가능성 검증에 초점을 둔 PoC로, 프로덕션 수준의 안정성·보안·코드 품질을 보장하지 않습니다.
